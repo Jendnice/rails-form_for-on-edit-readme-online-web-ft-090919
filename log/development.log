@@ -942,3 +942,77 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/posts" for 35.138.220.199 at 2019-11-09 03:12:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 620ms (Views: 581.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/2" for 35.138.220.199 at 2019-11-09 03:12:50 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/2" for 35.138.220.199 at 2019-11-09 03:12:54 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for 35.138.220.199 at 2019-11-09 03:12:56 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 35.138.220.199 at 2019-11-09 03:12:59 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4/edit" for 35.138.220.199 at 2019-11-09 03:13:07 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/4" for 35.138.220.199 at 2019-11-09 03:13:32 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ATAvaSom4otNzqh8XvW2N3HYgQhUlc7CCjZ5P/9PUW5gw0nVC112KecpVFHy3Q0zTf/d93BT0LV7lB91FoY9Pg==", "post"=>{"title"=>"Edited Post Title", "description"=>"Edited post description "}, "commit"=>"Update Post", "id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Edited Post Title"], ["description", "Edited post description "], ["updated_at", "2019-11-09 03:13:32.467772"], ["id", 4]]
+  [1m[35m (54.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.130.239:51968/posts/4
+Completed 302 Found in 71ms (ActiveRecord: 57.6ms)
+
+
+Started GET "/posts/4" for 35.138.220.199 at 2019-11-09 03:13:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
