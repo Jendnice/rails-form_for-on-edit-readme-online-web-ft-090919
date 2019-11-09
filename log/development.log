@@ -889,3 +889,6 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 95ms (Views: 73.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/posts/2" for 35.138.220.199 at 2019-11-09 03:11:39 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
